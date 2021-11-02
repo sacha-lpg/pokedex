@@ -1,0 +1,84 @@
+.modal {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background-color: rgb(234,231,110);
+     padding: 7px;
+    text-align: center;
+    width: 20rem;
+    height: 30rem;
+    z-index: 10;
+    position: fixed;
+    top: 20vh;
+
+    left: 42%;
+  }
+
+  .carte{
+    border-radius: 6px;
+    height: 100%;
+  }
+
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px;
+    font-weight: bold;
+  }
+  
+  .logo{
+    /* background-color: rgb(230, 230, 230); */
+    background-image: url("https://downloadwap.com/thumbs2/wallpapers/p2/2019/games/12/c6f47b8213135834.jpg");
+    height: 200px;
+    background-size: 320px 200px;
+  }
+  .logo img{
+    width: 70%;
+  }
+  .mid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: bold;
+    padding-top: 10px;;
+    padding-left: 10px;
+    gap: 7px;
+  }
+
+  .sep{
+  
+      border: none;
+      border-top: 3px double rgb(234,231,110);
+      color: rgb(234,231,110);
+      overflow: visible;
+      text-align: center;
+      
+      padding: 4px;
+  
+  }
+
+  .bar{
+    background-color:rgb(234,231,110) ;
+    padding: 3px;
+    font-style: italic;
+  }
+
+  .stats{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    gap: 30px;
+  }
+
+  .bot{
+    position: fixed;
+    margin-top: 6rem;
+    margin-left: 8rem;
+  }
+
+  .bot button{
+    background-color:rgb(234,231,110) ;
+    border-radius: 5px;
+    border-style:groove;
+    border-color: yellow;
+  }

@@ -1,0 +1,54 @@
+ .menu {
+   display: flex;
+   flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+ }
+
+
+
+ .search input {
+   width: 80%;
+ }
+ 
+ 
+ .menu nav  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    background-color: white;
+    margin: 4%;
+    width: 75%;
+    height: 30%;
+    border-radius: 10px;
+  }
+
+  .page {
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+      }
+
+  .pokeball {
+    width: 60px;
+  }
+
+  .pokeball:hover {
+    content: url("../../images/pokeball-hover.png");
+  }
+
+  .dresseur {
+    width: 60px;
+  }
+
+  .dresseur:hover {
+    content: url("../../images/dresseur-hover.png");
+  }
+
+  .logo{
+    margin-right: 100px;
+  }
+  
