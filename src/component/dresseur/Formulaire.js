@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import * as yup from 'yup';
 
 import classes from "./Formulaire.module.css";
 
@@ -12,6 +13,13 @@ function FormDresseur() {
       alert("Bienvenue sur le pokédex "+values.name+" !");
     },
   });
+
+  let schema = yup.object().shape({
+    name: yup.string().required(),
+    gender: yup.number().required()
+  });
+
+
   return (
     <div className={classes.block}>
     <form onSubmit={formik.handleSubmit} className={classes.form}>
@@ -37,7 +45,7 @@ function FormDresseur() {
         value={formik.values.gender}
       />
       </div>
-      <button type="submit" className={classes.boutton}>Valider</button>
+      <button type="submit" className={classes.boutton}>Valider </button>
     </form>
     </div>
 

@@ -8,33 +8,21 @@ const axios = require("axios");
 function AllPokemonPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedPokemons, setLoadedPokemons] = useState([]);
-  const [searchTerm, setSurchTerm] = useState("");
 
   const handleSearchTerm = (e) => {
     setLoadedPokemons(loadedPokemons);
     let val = e.target.value;
-
-    // if (val.length > 2) {
-    setSurchTerm(val);
-    const updatepoke = loadedPokemons.filter((poke) =>
-      poke.name.includes(searchTerm)
-    );
-    console.log(updatepoke);
+    const updatepoke = loadedPokemons.filter((poke) => poke.name.includes(val));
     setLoadedPokemons(updatepoke);
-    // }
   };
-
-  
 
   useEffect(() => {
     setIsLoading(true);
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
       .then((resp) => {
-        resp = resp.data;
-        resp = resp.results;
         setIsLoading(false);
-        setLoadedPokemons(resp);
+        setLoadedPokemons(resp.data.results);
       });
   }, []);
 
