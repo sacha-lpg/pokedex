@@ -1,51 +1,58 @@
 import { useFormik } from "formik";
-import * as yup from 'yup';
+
 
 import classes from "./Formulaire.module.css";
+import { dresseurSchema } from "../CONST/VALIDFORM";
 
 function FormDresseur() {
+
   const formik = useFormik({
     initialValues: {
-      name: "",
-      gender: "",
-    },
+      firstname: "",
+      lastname: "",
+    }, 
+    validationSchema: dresseurSchema, 
     onSubmit: (values) => {
-      alert("Bienvenue sur le pokédex "+values.name+" !");
+      alert("Bienvenue sur le pokédex "+values.firstname +" "+ values.lastname +" !");
     },
   });
 
-  let schema = yup.object().shape({
-    name: yup.string().required(),
-    gender: yup.number().required()
-  });
+
 
 
   return (
     <div className={classes.block}>
+    
     <form onSubmit={formik.handleSubmit} className={classes.form}>
         <div className={classes.field}>
-      <label htmlFor="name">Nom du dresseur :</label>
+      <label htmlFor="firstname">Firstname :</label>
       <input
-        id="name"
-        name="name"
+        id="firstname"
         type="text"
-        placeholder="ptdr t ki ?"
+        placeholder="enter your firstname"
         onChange={formik.handleChange}
         value={formik.values.name}
+        {... formik.getFieldProps('firstname')}
       />
+      {formik.touched.firstname && formik.errors.firstname ? (
+        <div className={classes.error}>{formik.errors.firstname}</div>
+      ) : null }
       </div>
       <div className={classes.field}>
-      <label htmlFor="gender">Genre :</label>
+      <label htmlFor="lastname"> Lastname :</label>
       <input
-        id="gender"
-        name="gender"
+        id="lastname"
         type="text"
-        placeholder="Homme, Femme, Hellicoptère ?"
+        placeholder="enter your lastname"
         onChange={formik.handleChange}
         value={formik.values.gender}
+        {... formik.getFieldProps('lastname')}
       />
+      {formik.touched.lastname && formik.errors.lastname ? (
+        <div className={classes.error}>{formik.errors.lastname}</div>
+      ) : null }
       </div>
-      <button type="submit" className={classes.boutton}>Valider </button>
+      <button type="submit" className={classes.boutton}>Submit </button>
     </form>
     </div>
 

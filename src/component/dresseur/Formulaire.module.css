@@ -37,7 +37,13 @@
     
 }
 
+
 .boutton{
     width: 50%;
     height: 40px;
+}
+
+.error{
+  color: red;
+  font-size: 12px;
 }
