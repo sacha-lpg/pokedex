@@ -6,7 +6,7 @@
   margin-left: 500px;
   margin-right: 500px;
   background-color: white;
-  height: 500px;
+  height: 800px;
   border-radius: 10px;
   border-style: double;
 }
@@ -35,6 +35,14 @@
     border-left: none;
     border-right: none;
     
+}
+
+.field select{
+  height: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  
 }
 
 

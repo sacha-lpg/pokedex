@@ -1,6 +1,6 @@
 import React from "react";
 import { useField, ErrorMessage } from "formik";
-import {StyledLabel, StyledSelect, StyledErrorMessage } from './styled';
+import {StyledLabel, StyledSelect, StyledErrorMessage } from './Styled';
 
 const Select = ({ label, ...props }: any) => {
     const [field, meta] = useField(props);

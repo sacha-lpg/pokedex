@@ -1,0 +1,57 @@
+// const FormDresseur = () => {
+//   return (
+//     <>
+//       <h1>CREATE</h1>
+//       <Formik
+//         initialValues={{
+//           firstName: "",
+//           lastName: "",
+//           genderType: "",
+//         }}
+//         validationSchema={dresseurSchema}
+//         onSubmit={(values, { setSubmitting }) => {
+//           setTimeout(() => {
+//             alert(JSON.stringify(values, null, 2));
+//             setSubmitting(false);
+//           }, 1000);
+//         }}
+//       >
+//         {({ isSubmitting, isValid, dirty }) => (
+//           <form>
+//             <TextInput
+//               label="First Name"
+//               name="firstName"
+//               type="text"
+//               placeolder="John"
+//             />
+//             <TextInput
+//               label="Last Name"
+//               name="lastName"
+//               type="text"
+//               placeolder="Doe"
+//             />
+//             <Select label="Gender" name="genderType">
+//               <option value="" disabled>
+//                 Select a gender
+//               </option>
+//               <option value="Man">Man</option>
+//               <option value="Woman">Woman</option>
+//               <option value="Other">Other</option>
+//             </Select>
+
+//             <button
+//               type="submit"
+//               disabled={isSubmitting || !dirty || (!isValid && dirty)}
+//             >
+//               Submit
+//             </button>
+
+//             <button type="reset" disabled={isSubmitting || !dirty}>
+//               reset
+//             </button>
+//           </form>
+//         )}
+//       </Formik>
+//     </>
+//   );
+// };

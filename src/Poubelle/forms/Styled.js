@@ -22,4 +22,4 @@ const StyledLabel = styled.label`
     margin-top: 1rem;
 `;
 
-export {StyledErrorMessage, StyledSelect, StyledSelect};
+export {StyledErrorMessage, StyledSelect, StyledLabel};
