@@ -8,13 +8,20 @@ const axios = require("axios");
 function AllPokemonPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedPokemons, setLoadedPokemons] = useState([]);
+  const [filteredList, setFilteredList] = useState([]);
+
 
   const handleSearchTerm = (e) => {
-    setLoadedPokemons(loadedPokemons);
     let val = e.target.value;
-    const updatepoke = loadedPokemons.filter((poke) => poke.name.includes(val));
-    setLoadedPokemons(updatepoke);
+    console.log(val);
+    if(val === ""){
+      setFilteredList(loadedPokemons);
+    }
+
+    else {
+    setFilteredList(loadedPokemons.filter((poke) => poke.name.includes(val)));
   };
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -23,6 +30,7 @@ function AllPokemonPage() {
       .then((resp) => {
         setIsLoading(false);
         setLoadedPokemons(resp.data.results);
+        setFilteredList(resp.data.results);
       });
   }, []);
 
@@ -45,7 +53,7 @@ function AllPokemonPage() {
           onChange={handleSearchTerm}
         />
       </div>
-      <PokemonList pokemons={loadedPokemons} />
+      <PokemonList pokemons={filteredList} />
     </div>
   );
 }

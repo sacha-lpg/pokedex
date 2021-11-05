@@ -4,11 +4,8 @@ import classes from "./MainNavigation.module.css";
 import pokeball from "./../../images/pokeball.png";
 import dresseur from "./../../images/dresseur.png";
 
-
 function MainNavigation() {
   
-
-
   return (
     <header className={classes.menu}>
       <nav>

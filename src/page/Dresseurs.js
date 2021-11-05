@@ -1,11 +1,20 @@
 import FormDresseur from "../component/dresseur/Formulaire";
+import Profil from "../component/dresseur/Profil";
+import useStore from "../Store";
 
 function DresseursPage() {
-return (
-    <FormDresseur/>
     
- );
+    const connected = useStore((state) => state.connected);
+   
+    if(connected){
+        return (
+            <Profil />
+        )
+    }
+    else {
+        return <FormDresseur />
+    }
        
 }
 
-export default DresseursPage;
+export default DresseursPage; 

@@ -1,0 +1,36 @@
+.primary {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    margin: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: white;
+    height: auto;
+    border-radius: 10px;
+    border-style: double;
+    gap: 30px; 
+
+}
+
+.pic img{
+    width: 150px;
+}
+
+.secondary {
+    margin-left: 100px;
+}
+
+.infos {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.team {
+    margin-top: 50px;
+    background-color: rgb(230,230,230);
+    border-style: double;
+    border-radius: 5px;
+    width: 1227px;
+    height: auto;
+}

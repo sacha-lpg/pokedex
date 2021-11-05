@@ -49,7 +49,7 @@ function PokemonDetails(props) {
       >
         <div className={classes.top}>
           <div>{loadedPokemon.name} </div>
-          <div>{loadedPokemon.stats[0].base_stat + " HP"} </div>
+          <div>{loadedPokemon.stats[0].base_stat + " ❤️"} </div>
         </div>
         <div className={classes.sep}></div>
         <div className={classes.logo}>
@@ -67,8 +67,8 @@ function PokemonDetails(props) {
         <div className={classes.mid}>
           <div>Type : {getTypes()}</div>
           <div className={classes.stats}>
-            <div>Attack : {loadedPokemon.stats[1].base_stat}</div>
-            <div> Defense : {loadedPokemon.stats[2].base_stat}</div>
+            <div>🏹 : {loadedPokemon.stats[1].base_stat}</div>
+            <div> 🛡️ : {loadedPokemon.stats[2].base_stat}</div>
           </div>
         </div>
         <div className={classes.bot}>

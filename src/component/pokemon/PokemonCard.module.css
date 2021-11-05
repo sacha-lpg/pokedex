@@ -19,7 +19,8 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  background-color: white;
+  background-image: url("https://eternia.fr/public/media//xy/decorations/fonds/plante.png");
+  background-size: 200px 200px;
 }
 .info{
   display: flex;
@@ -51,8 +52,22 @@
 }
 
 .boutton{
-  background-color: rgb(55, 71, 79);
+  background-color: rgb(114, 114, 114);
   border-radius: 5px;
   color: #fff;
   width: 100px;
+}
+
+.boutton:hover {
+  cursor: pointer;
+}
+
+.add {
+  margin-left: 55px;
+   background: none;
+  border: none;
+}
+
+.add:hover{
+  cursor: pointer;
 }

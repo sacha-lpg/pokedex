@@ -1,14 +1,13 @@
 import PokemonCard from "./PokemonCard";
 import classes from "./PokemonList.module.css";
 
-function PokemonList({pokemons}) {
-  console.log(pokemons);
-  if (pokemons === undefined) {
-    return <div></div>;
+function Teamlist(props) {
+  if (props.pokemons === undefined) {
+    return null;
   } else {
     return (
       <div className={classes.list}>
-        {pokemons.map((pokemon) => (
+        {props.pokemons.map((pokemon) => (
           <PokemonCard
             key={pokemon.url.split("/")[6]}
             id={pokemon.url.split("/")[6]}
@@ -26,4 +25,4 @@ function PokemonList({pokemons}) {
   }
 }
 
-export default PokemonList;
+export default Teamlist;
